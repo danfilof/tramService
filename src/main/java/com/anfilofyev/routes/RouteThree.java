@@ -1,6 +1,7 @@
 package com.anfilofyev.routes;
 
 import com.anfilofyev.stations.StationsEnum;
+import com.anfilofyev.units.TransportUnit;
 
 import java.util.ArrayList;
 import java.util.EnumSet;
@@ -14,9 +15,19 @@ public class RouteThree extends Route {
             StationsEnum.Luzernerring, StationsEnum.WaldighoferStr, StationsEnum.Burgfelderhof, StationsEnum.SaintExupery, StationsEnum.PlaceMermoz, StationsEnum.Soleil,
             StationsEnum.SaintLouisGare));*/
 
-
-
     public RouteThree() {
+        super(3, generateStationList(), StationsEnum.BirstfeldenHard, StationsEnum.SaintLouisGare);
+    }
+
+    public RouteThree(int startTime, int endTime) {
+        super(3, generateStationList(), StationsEnum.BirstfeldenHard, StationsEnum.SaintLouisGare);
+    }
+
+    public RouteThree(int startTime, int endTime, TransportUnit unit) {
+        super(3, generateStationList(), StationsEnum.BirstfeldenHard, StationsEnum.SaintLouisGare);
+    }
+
+    public RouteThree(TransportUnit unit) {
         super(3, generateStationList(), StationsEnum.BirstfeldenHard, StationsEnum.SaintLouisGare);
     }
 

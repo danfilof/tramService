@@ -1,7 +1,14 @@
 package com.anfilofyev.units;
 
 public enum transportType {
-    TRAM,
-    BUS,
-    TRAIN
+    TRAM(70),
+    BUS(70),
+    TRAIN(300);
+
+    private int capacity;
+
+    private transportType(int capacity) {
+        this.capacity = capacity;
+    }
+
 }

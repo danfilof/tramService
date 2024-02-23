@@ -8,6 +8,5 @@ public abstract class TransportUnit {
 
     public int capacity;
 
-    public Route route;
 
 }
