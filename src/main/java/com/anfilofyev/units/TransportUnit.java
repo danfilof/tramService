@@ -10,5 +10,4 @@ public abstract class TransportUnit {
 
     public Route route;
 
-
 }
