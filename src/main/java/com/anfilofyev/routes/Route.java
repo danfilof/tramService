@@ -1,8 +1,7 @@
 package com.anfilofyev.routes;
 
-import com.anfilofyev.stations.Station;
 import com.anfilofyev.stations.StationsEnum;
-import com.anfilofyev.units.TransportUnit;
+import com.anfilofyev.units.transportType;
 
 import java.util.List;
 
@@ -12,7 +11,31 @@ public abstract class Route {
 
     int number;
 
-    TransportUnit unit;
+    public transportType getType() {
+        return type;
+    }
+
+    public void setType(transportType type) {
+        this.type = type;
+    }
+
+    public int getStartTime() {
+        return startTime;
+    }
+
+    public void setStartTime(int startTime) {
+        this.startTime = startTime;
+    }
+
+    public int getEndTime() {
+        return endTime;
+    }
+
+    public void setEndTime(int endTime) {
+        this.endTime = endTime;
+    }
+
+    transportType type;
     List<StationsEnum> stationsList;
 
     StationsEnum startStation;
@@ -71,21 +94,21 @@ public abstract class Route {
         this.endStation = endStation;
     }
 
-    public Route(int number, List<StationsEnum> stationsList, StationsEnum startStation, StationsEnum endStation, TransportUnit unit) {
+    public Route(int number, List<StationsEnum> stationsList, StationsEnum startStation, StationsEnum endStation, transportType type) {
         this.number = number;
         this.stationsList = stationsList;
         this.startStation = startStation;
         this.endStation = endStation;
-        this.unit = unit;
+        this.type = type;
     }
 
-    public Route(int number, List<StationsEnum> stationsList, StationsEnum startStation, StationsEnum endStation, int startTime, int endTime, TransportUnit unit) {
+    public Route(int number, List<StationsEnum> stationsList, StationsEnum startStation, StationsEnum endStation, int startTime, int endTime, transportType type) {
         this.number = number;
         this.stationsList = stationsList;
         this.startStation = startStation;
         this.endStation = endStation;
         this.startTime = startTime;
         this.endTime = endTime;
-        this.unit = unit;
+        this.type = type;
     }
 }
