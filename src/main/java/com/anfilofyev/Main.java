@@ -12,5 +12,9 @@ public class Main {
         System.out.println(route31.getType());
         System.out.println(route31.getStationsList());
 
+        RouteThree route32 = new RouteThree();
+
+        System.out.println(route32.getEndTime());
+
     }
 }
