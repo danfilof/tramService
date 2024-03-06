@@ -52,4 +52,6 @@ public enum StationsEnum {
     Dreirosenbrucke,
     Pilgerstr,
 
+    BaselSBB
+
 }
